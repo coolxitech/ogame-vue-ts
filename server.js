@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('node:path');
-const open = require('open');
+const openUrl = require('open');
 const os = require('node:os');
 
 const app = express();
@@ -37,7 +37,7 @@ const server = app.listen(0, HOST, async () => {
 
     // 3. 自动打开浏览器
     try {
-        await open(url);
+        await openUrl(url);
     } catch (err) {
         console.error('无法自动打开浏览器:', err);
     }
