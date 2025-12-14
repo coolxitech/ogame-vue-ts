@@ -38,7 +38,7 @@ OGame Vue TS is a single-player, browser-based space strategy game inspired by t
 
 - **Frontend Framework:** [Vue 3](https://vuejs.org/) with Composition API (`<script setup>`)
 - **Language:** [TypeScript](https://www.typescriptlang.org/) with strict type checking
-- **Build Tool:** [Vite](https://vitejs.dev/) (Custom Rolldown-Vite 7.2.5)、[Golang](https://golang.org/)(Building multi-platform compatible binary executables)
+- **Build Tool:** [Vite](https://vitejs.dev/) (Custom Rolldown-Vite 7.2.5)、[Golang](https://golang.org/)(Building cross-platform Web server.)、[Electron](https://www.electronjs.org/)(Building cross-platform visual interfaces)
 - **State Management:** [Pinia](https://pinia.vuejs.org/) with persisted state plugin
 - **Routing:** [Vue Router 4](https://router.vuejs.org/)
 - **UI Components:** [shadcn-vue](https://www.shadcn-vue.com/) (New York style)
