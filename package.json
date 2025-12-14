@@ -72,7 +72,16 @@
     "win": {
       "target": "nsis",
       "icon": "public/favicon.ico",
-      "verifyUpdateCodeSignature": false
+      "verifyUpdateCodeSignature": false,
+      "artifactName": "${productName}-Setup.${ext}"
+    },
+    "mac": {
+      "target": ["dmg", "zip"],
+      "artifactName": "${productName}-mac.${ext}"
+    },
+    "linux": {
+      "target": ["AppImage", "deb"],
+      "artifactName": "${productName}-linux.${ext}"
     }
   }
 }
