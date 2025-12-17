@@ -88,7 +88,7 @@
 </template>
 
 <script setup lang="ts">
-import type { SpringOptions } from "motion-v";
+import type {SpringOptions, Transition} from "motion-v";
 import { cn } from "@/lib/utils";
 import { motion, useMotionValue, useSpring } from "motion-v";
 import { computed, onMounted, ref, watch } from "vue";
@@ -156,21 +156,21 @@ watch(
   },
 );
 
-const starLayer1Transition = computed(() => ({
+const starLayer1Transition = computed<Transition>(() => ({
   repeat: Infinity,
   duration: props.speed,
-  ease: "linear",
+  ease: "linear" as const,
 }));
 
-const starLayer2Transition = computed(() => ({
+const starLayer2Transition = computed<Transition>(() => ({
   repeat: Infinity,
   duration: props.speed * 2,
-  ease: "linear",
+  ease: "linear" as const,
 }));
 
-const starLayer3Transition = computed(() => ({
+const starLayer3Transition = computed<Transition>(() => ({
   repeat: Infinity,
   duration: props.speed * 3,
-  ease: "linear",
+  ease: "linear" as const,
 }));
 </script>
