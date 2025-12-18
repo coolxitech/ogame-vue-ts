@@ -795,26 +795,7 @@ export default {
     buildDate: 'Build-Datum',
     community: 'Community',
     github: 'GitHub-Repository',
-    qqGroup: 'QQ-Gruppe',
-    notifications: 'Benachrichtigungseinstellungen',
-    notificationsDesc: 'Verwalten Sie Benachrichtigungen im Spiel',
-    notificationTypes: 'Benachrichtigungstypen',
-    browserNotifications: 'Browser-Benachrichtigungen',
-    inAppNotifications: 'In-App-Benachrichtigungen',
-    constructionComplete: 'Bau abgeschlossen',
-    researchComplete: 'Forschung abgeschlossen',
-    browserPermission: 'Browser-Benachrichtigungen aktivieren',
-    permissionGranted: 'Erlaubnis erteilt',
-    permissionDenied: 'Erlaubnis verweigert/nicht erteilt',
-    inAppNotificationsDesc: 'Über In-Page-Popups anzeigen',
-    notificationsDisabled: 'Aktivieren Sie einen der obigen Schalter, um spezifische Benachrichtigungen zu konfigurieren',
-    suppressInFocus: 'Browser-Benachrichtigungen unterdrücken, wenn Seite fokussiert ist',
-    expandTypes: 'Details anzeigen',
-    collapseTypes: 'Details ausblenden'
-  },
-  notifications: {
-    constructionComplete: 'Bau abgeschlossen',
-    researchComplete: 'Forschung abgeschlossen'
+    qqGroup: 'QQ-Gruppe'
   },
   gmView: {
     title: 'GM-Kontrollpanel',

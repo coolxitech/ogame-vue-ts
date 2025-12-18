@@ -101,8 +101,7 @@ export const generatePositionKey = (galaxy: number, system: number, position: nu
 export const processGameUpdate = (
   player: Player,
   now: number,
-  gameSpeed: number = 1,
-  onNotification?: (type: string, itemType: string, level?: number) => void
+  gameSpeed: number = 1
 ): {
   updatedResearchQueue: BuildQueueItem[]
 } => {
@@ -114,13 +113,6 @@ export const processGameUpdate = (
     pointsLogic.addPoints(player, points)
   }
 
-  // 通知回调
-  const onCompleted = (type: string, itemType: string, level?: number, _quantity?: number) => {
-    if (onNotification) {
-      onNotification(type, itemType, level)
-    }
-  }
-
   // 更新所有星球资源（直接同步计算，避免 Worker 通信开销）
   player.planets.forEach(planet => {
     resourceLogic.updatePlanetResources(planet, now, bonuses, gameSpeed)
@@ -129,7 +121,7 @@ export const processGameUpdate = (
   // 更新所有星球其他状态
   player.planets.forEach(planet => {
     // 检查建造队列
-    buildingLogic.completeBuildQueue(planet, now, onPointsEarned, onCompleted)
+    buildingLogic.completeBuildQueue(planet, now, onPointsEarned)
 
     // 更新星球最大空间
     if (planet.isMoon) {
@@ -141,13 +133,7 @@ export const processGameUpdate = (
   })
 
   // 检查研究队列
-  const updatedResearchQueue = researchLogic.completeResearchQueue(
-    player.researchQueue,
-    player.technologies,
-    now,
-    onPointsEarned,
-    onCompleted
-  )
+  const updatedResearchQueue = researchLogic.completeResearchQueue(player.researchQueue, player.technologies, now, onPointsEarned)
 
   return {
     updatedResearchQueue
