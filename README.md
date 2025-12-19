@@ -5,11 +5,12 @@
 
   一个基于 Vue 3 和 TypeScript 构建的现代化 OGame 太空策略游戏。
 
+  [![GitHub Release](https://img.shields.io/github/v/release/setube/ogame-vue-ts?style=flat&logo=github&label=Release)](https://github.com/setube/ogame-vue-ts/releases/latest)
   [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
   [![Vue 3](https://img.shields.io/badge/Vue-3.5-brightgreen.svg)](https://vuejs.org/)
   [![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue.svg)](https://www.typescriptlang.org/)
   [![Vite](https://img.shields.io/badge/Vite-7.2-646CFF.svg)](https://vitejs.dev/)
-  [![Go](https://img.shields.io/badge/Go-1.25-79D4FD.svg)](https://golang.org/)
+  [![Go](https://img.shields.io/badge/Go-1.23-79D4FD.svg)](https://golang.org/)
 
   [English](README-EN.md) | 简体中文
 
@@ -53,23 +54,21 @@ OGame Vue TS 是一款受经典 OGame 游戏启发的单机版、基于浏览器
 
 #### 服务端
 
-[Windows](/releases/latest/download/ogame-windows-amd64.exe)
-
-[Linux amd64](/releases/latest/download/ogame-linux-amd64)
-
-[Linux arm64](/releases/latest/download/ogame-linux-arm64)
-
-[MacOS Intel](/releases/latest/download/ogame-macos-amd64)
-
-[MacOS](/releases/latest/download/ogame-macos-arm64)
+[![Windows](https://img.shields.io/badge/Windows-x64-0078D6?style=flat&logo=windows)](https://github.com/setube/ogame-vue-ts/releases/latest/download/ogame-server-win.exe)
+[![Linux x64](https://img.shields.io/badge/Linux-x64-FCC624?style=flat&logo=linux&logoColor=black)](https://github.com/setube/ogame-vue-ts/releases/latest/download/ogame-server-linux)
+[![Linux ARM64](https://img.shields.io/badge/Linux-ARM64-FCC624?style=flat&logo=linux&logoColor=black)](https://github.com/setube/ogame-vue-ts/releases/latest/download/ogame-server-linux-arm64)
 
 #### 桌面版
 
-[Windows](/releases/latest/download/OGame.Setup.exe)
+[![Windows](https://img.shields.io/badge/Windows-Setup-0078D6?style=flat&logo=windows)](https://github.com/setube/ogame-vue-ts/releases/latest/download/OGame.Setup.exe)
+[![Linux](https://img.shields.io/badge/Linux-AppImage-FCC624?style=flat&logo=linux&logoColor=black)](https://github.com/setube/ogame-vue-ts/releases/latest/download/OGame.AppImage)
+[![macOS](https://img.shields.io/badge/macOS-DMG-000000?style=flat&logo=apple)](https://github.com/setube/ogame-vue-ts/releases/latest/download/OGame-mac.dmg)
 
-[Ubuntu](/releases/latest/download/OGame.AppImage)
+#### Android
 
-[MacOS](/releases/latest/download/OGame-mac.dmg)
+[![ARM64](https://img.shields.io/badge/Android-ARM64-3DDC84?style=flat&logo=android&logoColor=white)](https://github.com/setube/ogame-vue-ts/releases/latest/download/OGame-1.4.0-arm64-v8a.APK)
+[![ARMv7](https://img.shields.io/badge/Android-ARMv7-3DDC84?style=flat&logo=android&logoColor=white)](https://github.com/setube/ogame-vue-ts/releases/latest/download/OGame-1.4.0-armeabi-v7a.APK)
+[![x64](https://img.shields.io/badge/Android-x64-3DDC84?style=flat&logo=android&logoColor=white)](https://github.com/setube/ogame-vue-ts/releases/latest/download/OGame-1.4.0-x86_64.APK)
 
 ### 环境要求
 

@@ -195,7 +195,19 @@ jobs:
           echo "Final assets to upload:"
           ls -R ./final-release
 
-      # 3. 一次性上传，禁止重复匹配
+      # 3. 删除已存在的同名 APK 资源（避免 422 错误）
+      - name: Delete existing APK assets
+        run: |
+          VERSION=${{ steps.get_version.outputs.VERSION }}
+          # 获取 release 中的现有 assets 并删除 APK 文件
+          gh release view "$VERSION" --json assets -q '.assets[].name' 2>/dev/null | grep -i '\.APK$' | while read asset; do
+            echo "Deleting existing asset: $asset"
+            gh release delete-asset "$VERSION" "$asset" -y || true
+          done
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # 4. 一次性上传，禁止重复匹配
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
         with:
