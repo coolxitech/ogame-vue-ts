@@ -256,21 +256,21 @@ export const checkResourcesAvailable = (currentResources: Resources, cost: Resou
 /**
  * 扣除资源
  */
-export const deductResources = (currentResources: Resources, cost: Resources): void => {
-  currentResources.metal -= cost.metal
-  currentResources.crystal -= cost.crystal
-  currentResources.deuterium -= cost.deuterium
-  currentResources.darkMatter -= cost.darkMatter
+export const deductResources = (currentResources: Resources, cost: Partial<Resources>): void => {
+  currentResources.metal -= cost.metal || 0
+  currentResources.crystal -= cost.crystal || 0
+  currentResources.deuterium -= cost.deuterium || 0
+  currentResources.darkMatter -= cost.darkMatter || 0
 }
 
 /**
  * 添加资源
  */
-export const addResources = (currentResources: Resources, amount: Resources): void => {
-  currentResources.metal += amount.metal
-  currentResources.crystal += amount.crystal
-  currentResources.deuterium += amount.deuterium
-  currentResources.darkMatter += amount.darkMatter
+export const addResources = (currentResources: Resources, amount: Partial<Resources>): void => {
+  currentResources.metal += amount.metal || 0
+  currentResources.crystal += amount.crystal || 0
+  currentResources.deuterium += amount.deuterium || 0
+  currentResources.darkMatter += amount.darkMatter || 0
 }
 
 /**

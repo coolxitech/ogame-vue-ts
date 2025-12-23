@@ -13,7 +13,6 @@ import {
   type QuestNotification,
   type CampaignQuestConfig,
   type NPC,
-  type Resources,
   RelationStatus,
   type BuildingType,
   type TechnologyType,
@@ -357,7 +356,7 @@ export const claimQuestRewards = (
   const currentPlanet = player.planets[0] // 默认发放到第一个星球
 
   if (rewards.resources && currentPlanet) {
-    resourceLogic.addResources(currentPlanet.resources, rewards.resources as Resources)
+    resourceLogic.addResources(currentPlanet.resources, rewards.resources)
   }
 
   if (rewards.darkMatter && currentPlanet) {
